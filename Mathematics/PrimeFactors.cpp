@@ -2,31 +2,33 @@
 #include<math.h>
 using namespace std;
 
-bool isPrime(int n)
+void primeFactors(int n)
 {
-    if(n == 1)
+    if(n < 1)
     {
-        return false;
+        return;
     }
     for(int i=2;i*i<=n;i++)
     {
-        if(n%i == 0)
+        while(n % i == 0)
         {
-            return false;
+            cout << i << " ";
+            n = n/i;
+        }
+        if(n > 1)
+        {
+            cout << n;
         }
     }
-    return true;
 }
 
-void primeFactors(int n)
+int main(int argc, char const *argv[])
 {
-    for(int i=1;i<=n;i++)
-    {
-        if(isPrime(i))
-        int x = i;
-        while(n % x == 0)
-        {
+    int n;
+    cout << "Enter the value of the number: ";
+    cin >> n;
 
-        }
-    }
+    primeFactors(n);
+
+    return 0;
 }
