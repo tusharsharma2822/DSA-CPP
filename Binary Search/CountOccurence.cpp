@@ -41,7 +41,7 @@ int LastOccurence(int array[], int size, int target)
             answer = mid;
             low = mid + 1;
         }
-        else if(array[mid] < target)
+        else if(array[mid] < target) 
         {
             low = mid + 1;
         }
